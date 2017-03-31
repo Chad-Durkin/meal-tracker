@@ -1,6 +1,6 @@
-<div class="mealLog" *ngIf="mealLog.length > 0">
-  <h1>Meal Log!</h1>
-  <ul class="showAll" *ngFor="let meal of mealLog">
+<div *ngIf="showHigh === true">
+  <h1>High Calorie Meals</h1>
+  <ul class="showHighCal" *ngFor="let meal of sortMealLog()">
     <li>{{meal.name}}<br>
       Description: {{meal.detail}}<br>
       Calories: {{meal.calories}}

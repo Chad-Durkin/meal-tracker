@@ -3,7 +3,13 @@
   <h1>Total meals: {{mealCount}}</h1>
   <h1>Total calories: {{calorieCount}}</h1>
   <button (click)="showMealForm()">Add Meal</button>
+  <button (click)="showHighCal()">Sort Highest to Lowest</button>
+
   <add-meal (newMealSender)="addMeal($event)" [showForm]="showForm">Loading Add Meal Content...</add-meal>
+
+  <high-cal [showHigh]="showHigh" [mealLog]="mealLog" (sendEditMeal)="editMeal($event)">Loading High Calorie Content...</high-cal>
+
   <display-log [mealLog]="mealLog" (sendEditMeal)="editMeal($event)">Loading Display Log Content...</display-log>
+  
   <edit-meal [targetMeal]="mealToEdit">Loading Edit Meal Content...</edit-meal>
 </div>

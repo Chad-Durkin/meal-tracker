@@ -13,15 +13,17 @@ import { Meal }        from './meal';
 export class AppComponent {
 
   mealLog: Meal[] = [];
+  mealToEdit: Meal;
+  newCalorie: number;
+  showForm = false;
+  showHigh = false;
   mealCount = 0;
   calorieCount = 0;
-  showForm = false;
-  mealToEdit: Meal;
 
   addMeal(newMeal: Meal) {
       this.mealLog.push(newMeal);
       this.mealCount++;
-      this.calorieCount += newMeal.calories;
+      this.calorieCount += parseInt((newMeal.calories).toString());
   }
 
   editMeal(editThisMeal: Meal) {
@@ -33,6 +35,17 @@ export class AppComponent {
       this.showForm = true;
     } else {
       this.showForm = false;
+    }
+  }
+
+  showHighCal(): void{
+    if(this.showHigh == false){
+      this.showHigh = true;
+      if(this.showForm == true) {
+        this.showForm = false;
+      }
+    } else {
+      this.showHigh = false;
     }
   }
 

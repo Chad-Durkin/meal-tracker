@@ -11,7 +11,7 @@
     </div>
     <div class="form-group">
       <label for="calories">Number of Calories</label>
-      <input #newCalories>
+      <input #newCalories type="number">
     </div>
     <button (click)="createMeal(newName.value, newDetail.value, newCalories.value); newName.value = ''; newDetail.value = ''; newCalories.value = '';">Submit</button>
   </form>
