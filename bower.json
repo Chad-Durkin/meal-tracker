@@ -1,0 +1,23 @@
+{
+  "name": "tap-room",
+  "description": "App to manage a tap room",
+  "main": "",
+  "license": "ISC",
+  "keywords": [
+    "'"
+  ],
+  "homepage": "https://github.com/Rafeekey/tap-room",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7"
+  },
+  "authors": [
+    "Chad Durkin <Chaddurkin@gmail.com>"
+  ]
+}
