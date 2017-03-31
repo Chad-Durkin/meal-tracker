@@ -14,13 +14,13 @@ export class AppComponent {
 
   mealLog: Meal[] = [];
   mealCount = 0;
-  calorieCount = 1;
+  calorieCount = 0;
   showForm = false;
 
   addMeal(newMeal: Meal) {
       this.mealLog.push(newMeal);
       this.mealCount++;
-      this.calorieCount += parseInt(newMeal.calories);
+      this.calorieCount += newMeal.calories;
   }
 
   showMealForm(): void{
