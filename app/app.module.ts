@@ -6,6 +6,7 @@ import { AddMealComponent }     from './add-meal.component';
 import { DisplayLogComponent }  from './display-log.component';
 import { EditMealComponent }    from './edit-meal.component';
 import { HighCalComponent }    from './high-cal.component';
+import { LowCalComponent }    from './low-cal.component';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { HighCalComponent }    from './high-cal.component';
                   AddMealComponent,
                   DisplayLogComponent,
                   EditMealComponent,
-                  HighCalComponent ],
+                  HighCalComponent,
+                  LowCalComponent ],
   bootstrap:    [ AppComponent ]
 })
 

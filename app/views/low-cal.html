@@ -1,9 +1,9 @@
-<div *ngIf="showHigh === true">
-  <h1>High Calorie Meals</h1>
+<div *ngIf="showLow === true">
+  <h1>Low Calorie Meals</h1>
   <div class="none" *ngIf="sortMealLog().length == 0">
-    <h1>No meals in here with 500 or more calories</h1>
+    <h1>No meals in here with less than 500 calories</h1>
   </div>
-  <ul class="showHighCal" *ngFor="let meal of sortMealLog()">
+  <ul class="showLowCal" *ngFor="let meal of sortMealLog()">
     <li>{{meal.name}}<br>
       Description: {{meal.detail}}<br>
       Calories: {{meal.calories}}

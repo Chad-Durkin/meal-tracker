@@ -17,6 +17,7 @@ export class AppComponent {
   newCalorie: number;
   showForm = false;
   showHigh = false;
+  showLow = false;
   mealCount = 0;
   calorieCount = 0;
 
@@ -33,6 +34,12 @@ export class AppComponent {
   showMealForm(): void{
     if(this.showForm == false){
       this.showForm = true;
+      if(this.showLow == true) {
+        this.showLow = false;
+      }
+      if(this.showHigh ==true ) {
+        this.showHigh == false;
+      }
     } else {
       this.showForm = false;
     }
@@ -44,8 +51,25 @@ export class AppComponent {
       if(this.showForm == true) {
         this.showForm = false;
       }
+      if(this.showLow == true) {
+        this.showLow = false;
+      }
     } else {
       this.showHigh = false;
+    }
+  }
+
+  showLowCal(): void{
+    if(this.showLow == false){
+      this.showLow = true;
+      if(this.showForm == true) {
+        this.showForm = false;
+      }
+      if(this.showHigh ==true ) {
+        this.showHigh == false;
+      }
+    } else {
+      this.showLow = false;
     }
   }
 
