@@ -14,8 +14,8 @@ export class AddMealComponent {
   @Input() showForm: boolean;
   @Output() newMealSender = new EventEmitter();
 
-  createMeal(name: string, detail: string, calories: number) {
-    var newMeal: Meal = new Meal(name, detail, calories);
+  createMeal(newName: string, newDetail: string, newCalories: number) {
+    var newMeal: Meal = new Meal(newName, newDetail, newCalories);
     this.newMealSender.emit(newMeal);
   }
 
