@@ -9,6 +9,11 @@ import { Meal }        from './meal';
     .displayLog {
       background-color: #3A9DB2;
     }
+
+    .mealStats {
+      background-color: #CFF7FF;
+      text-align: center;
+    }
     `]
 })
 
@@ -36,42 +41,36 @@ export class AppComponent {
   showMealForm(): void{
     if(this.showForm == false){
       this.showForm = true;
-      if(this.showLow == true) {
-        this.showLow = false;
-      }
-      if(this.showHigh ==true ) {
-        this.showHigh == false;
-      }
+      this.showLow = false;
+      this.showHigh = false;
     } else {
       this.showForm = false;
+      this.showLow = false;
+      this.showHigh = false;
     }
   }
 
   showHighCal(): void{
     if(this.showHigh == false){
       this.showHigh = true;
-      if(this.showForm == true) {
-        this.showForm = false;
-      }
-      if(this.showLow == true) {
-        this.showLow = false;
-      }
+      this.showForm = false;
+      this.showLow = false;
     } else {
       this.showHigh = false;
+      this.showForm = false;
+      this.showLow = false;
     }
   }
 
   showLowCal(): void{
     if(this.showLow == false){
       this.showLow = true;
-      if(this.showForm == true) {
-        this.showForm = false;
-      }
-      if(this.showHigh ==true ) {
-        this.showHigh == false;
-      }
+      this.showForm = false;
+      this.showHigh = false;
     } else {
       this.showLow = false;
+      this.showForm = false;
+      this.showHigh = false;
     }
   }
 

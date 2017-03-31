@@ -1,7 +1,8 @@
 <div class="rootPage container">
-  <h1>This works</h1>
-  <h1>Total meals: {{mealCount}}</h1>
-  <h1>Total calories: {{calorieCount}}</h1>
+  <div class="mealStats">
+    <h1>Total meals: {{mealCount}}</h1>
+    <h1>Total calories: {{calorieCount}}</h1>
+  </div>
   <div class="displayLog">
     <display-log [mealLog]="mealLog" (sendEditMeal)="editMeal($event)">Loading Display Log Content...</display-log>
   </div>
