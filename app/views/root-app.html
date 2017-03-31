@@ -4,5 +4,6 @@
   <h1>Total calories: {{calorieCount}}</h1>
   <button (click)="showMealForm()">Add Meal</button>
   <add-meal (newMealSender)="addMeal($event)" [showForm]="showForm">Loading Add Meal Content...</add-meal>
-  <display-log [mealLog]="mealLog">Loading Display Log Content...</display-log>
+  <display-log [mealLog]="mealLog" (sendEditMeal)="editMeal($event)">Loading Display Log Content...</display-log>
+  <edit-meal [targetMeal]="mealToEdit">Loading Edit Meal Content...</edit-meal>
 </div>

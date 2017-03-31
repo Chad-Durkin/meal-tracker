@@ -1,4 +1,4 @@
-import { Component, Input }  from '@angular/core';
+import { Component, Input, Output, EventEmitter }  from '@angular/core';
 import { Meal }                                    from './meal';
 
 
@@ -12,4 +12,13 @@ import { Meal }                                    from './meal';
 
 export class DisplayLogComponent {
   @Input() mealLog: Meal[];
+  @Output() sendEditMeal = new EventEmitter();
+
+  editThisMeal: Meal;
+
+  editMeal(editMeal: Meal) {
+    this.editThisMeal = editMeal;
+    this.sendEditMeal.emit(this.editThisMeal);
+  }
+
 }

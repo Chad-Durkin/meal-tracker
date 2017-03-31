@@ -16,11 +16,16 @@ export class AppComponent {
   mealCount = 0;
   calorieCount = 0;
   showForm = false;
+  mealToEdit: Meal;
 
   addMeal(newMeal: Meal) {
       this.mealLog.push(newMeal);
       this.mealCount++;
       this.calorieCount += newMeal.calories;
+  }
+
+  editMeal(editThisMeal: Meal) {
+    this.mealToEdit = editThisMeal;
   }
 
   showMealForm(): void{

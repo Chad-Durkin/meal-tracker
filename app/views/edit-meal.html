@@ -1,0 +1,15 @@
+<div class="addMealForm" *ngIf="targetMeal">
+<h1>Edit your meal</h1>
+    <div class="form-group">
+      <label>Edit Name: </label> {{targetMeal.name}}
+      <input [(ngModel)]="targetMeal.name" placeholder="Name">
+    </div>
+    <div class="form-group">
+      <label>Edit Details: </label> {{targetMeal.detail}}
+      <input [(ngModel)]="targetMeal.detail" placeholder="Eetail">
+    </div>
+    <div class="form-group">
+      <label>Edit Calories: </label> {{targetMeal.calories}}
+      <input [(ngModel)]="targetMeal.calories" placeholder="Calories">
+    </div>
+</div>
