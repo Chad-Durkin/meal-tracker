@@ -6,7 +6,9 @@ import { Meal }        from './meal';
   selector: 'my-app',
   templateUrl: '../app/views/root-app.html',
   styles: [`
-
+    .displayLog {
+      background-color: #3A9DB2;
+    }
     `]
 })
 

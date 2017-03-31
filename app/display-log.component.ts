@@ -6,7 +6,12 @@ import { Meal }                                    from './meal';
   selector: 'display-log',
   templateUrl: '../app/views/display-log.html',
   styles: [`
-
+      h1 {
+        color: white;
+      }
+      .mealLog {
+          padding: 10px;
+      }
     `]
 })
 

@@ -1,7 +1,10 @@
-<div class="rootPage">
+<div class="rootPage container">
   <h1>This works</h1>
   <h1>Total meals: {{mealCount}}</h1>
   <h1>Total calories: {{calorieCount}}</h1>
+  <div class="displayLog">
+    <display-log [mealLog]="mealLog" (sendEditMeal)="editMeal($event)">Loading Display Log Content...</display-log>
+  </div>
   <button (click)="showMealForm()">Toggle New Meal Form</button>
   <button (click)="showHighCal()">Sort Highest to Lowest</button>
   <button (click)="showLowCal()">Sort Lowest to Highest</button>
@@ -10,7 +13,6 @@
 
   <high-cal [showHigh]="showHigh" [mealLog]="mealLog" (sendEditMeal)="editMeal($event)">Loading High Calorie Content...</high-cal>
   <low-cal [showLow]="showLow" [mealLog]="mealLog" (sendEditMeal)="editMeal($event)">Loading Low Calorie Content...</low-cal>
-  <display-log [mealLog]="mealLog" (sendEditMeal)="editMeal($event)">Loading Display Log Content...</display-log>
 
   <edit-meal [targetMeal]="mealToEdit">Loading Edit Meal Content...</edit-meal>
 </div>
