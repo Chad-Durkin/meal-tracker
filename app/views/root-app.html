@@ -1,5 +1,7 @@
-<div class="container">
-  <div class="beerSelection">
-    <h1>Welcome to the tap room!</h1>
-
+<div class="rootPage">
+  <h1>This works</h1>
+  <h1>Total meals: {{mealCount}}</h1>
+  <h1>Total calories: {{calorieCount}}</h1>
+  <button (click)="showMealForm()">Add Meal</button>
+  <add-meal (newMealSender)="addMeal($event)" [showForm]="showForm">Loading Add Meal Content...</add-meal>
 </div>
