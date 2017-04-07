@@ -12,5 +12,6 @@ import { Meal }                                    from './meal';
 
 export class EditMealComponent {
   @Input() targetMeal: Meal;
+  @Input() showEdit: boolean;
 
 }

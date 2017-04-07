@@ -1,10 +1,16 @@
 <div class="mealLog" *ngIf="mealLog.length > 0">
   <h1>Meal Log!</h1>
-  <ul class="showAll" *ngFor="let meal of mealLog">
+  <ul class="showAll" *ngFor="let meal of mealLog | calorieAmount:calorieFilter">
     <li>{{meal.name}}<br>
       Description: {{meal.detail}}<br>
       Calories: {{meal.calories}}
     </li>
     <button (click)="editMeal(meal)">Edit</button>
+    <button (click)="hideMeal()">Hide Edit</button>
   </ul>
+  <select (change)="onChange($event.target.value)">
+    <option value="all">All Tasks</option>
+    <option value="high">High Calories</option>
+    <option value="low" selected="selected">Low Calories</option>
+</select>
 </div>

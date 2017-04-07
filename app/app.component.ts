@@ -27,6 +27,7 @@ export class AppComponent {
   showLow = false;
   mealCount = 0;
   calorieCount = 0;
+  showEdit = false;
 
   addMeal(newMeal: Meal) {
       this.mealLog.push(newMeal);
@@ -36,6 +37,11 @@ export class AppComponent {
 
   editMeal(editThisMeal: Meal) {
     this.mealToEdit = editThisMeal;
+    this.showEdit = true;
+  }
+
+  hideEdit(hideParam: boolean) {
+    this.showEdit = hideParam;
   }
 
   showMealForm(): void{
